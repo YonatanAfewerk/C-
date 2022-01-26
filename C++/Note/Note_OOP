@@ -1,0 +1,65 @@
+#include<iostream> //input and output
+#include<vector> 
+#include<iomanip> //this sets the width eg.setw(3)
+#include<string> //string manipulation 
+#include<bits/stdc++.h>
+#include<cmath>
+#include<fstream>  //file manipulation
+#include<string> // Needed to use strings
+#include<cstdlib> // Needed to use random numbers
+#include<ctime> //to use the random number generator rnad(time())
+#include<list> //lets you include string list store {"one","two","three"}
+
+using namespace std;
+
+class YoutTubechannel
+{ 
+    //access modifier
+    public: //members of the class
+        string channelName;
+        string ownerName;
+        int subCounter;
+        list<string> pubVideoTitles;
+
+        //Constructer
+        YoutTubechannel(string n, string o_n, int sub_c, list<string> pub_v)
+        {
+            channelName = n;
+            ownerName = o_n;
+            subCounter = sub_c;
+            pubVideoTitles = pub_v;
+        }
+
+        void getinfo() //using a funcation or method to get the information from the class
+        {
+            cout << "Channel Name: "<< channelName <<endl;
+            cout << "Owner Name: " << ownerName << endl;
+            cout << "Sub Count: " << subCounter << endl;
+            cout << "Videos: " << endl;
+            for(string Videotitles : pubVideoTitles)
+            {
+                cout << Videotitles << endl;
+            }
+
+        }
+
+};
+
+int main()
+{
+    YoutTubechannel user1("CodeEthiopia", "Yonatan", 450000, {"code for Ethiopia", "code home", "Run Ethiopia"});
+    // string new_video;
+    // cout << "Enter New Video Title: ";
+    // getline(cin, new_video);
+    // user1.pubVideoTitles.push_back(new_video); ->> This how you new objects to the class
+    YoutTubechannel user2("LawEthiopia", "Helina", 670000, {"Law for Ethiopia", "Law from home", "Rights With Ethiopia"});
+    user2.pubVideoTitles.push_back("Make The Law");
+    cout << "======================================================== \n";
+    user1.getinfo();
+    cout << "======================================================== \n";
+    cout << "Seconed Channel " <<endl;;
+    user2.getinfo();
+
+    // system("pause >0");
+    return 0;
+}
