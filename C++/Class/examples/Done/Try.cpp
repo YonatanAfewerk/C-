@@ -14,20 +14,15 @@ using namespace std;
 
 int main()
 {
-    int x , y ,z;
+    int h = 9;
 
-    x = 10;
-    y = 10;
-    z = 10;
-
-    if (x > y && x > z)
-        cout << "Greatest number is x = " << x << endl;
-    else if (y > x && y > z)
-        cout << "Greatest number is y = " << y << endl;
-    else if (z > x && z > y)
-        cout << "Greatest number is z = " << z << endl;
-    else
-        cout << "There Equal -> " << x << " = " << y << " = "<< z << endl;
+    for (int i = h; i >= 1; i--)
+    {
+        for (int j = i; j >= 1; j--)
+        {
+            cout << setw(1) << j;
+        } cout << endl;
+    }
 
     // system("pause >0");
     return 0;

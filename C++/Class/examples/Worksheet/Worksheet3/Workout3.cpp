@@ -678,6 +678,22 @@ int main()
         654321
         7654321
 
+        int h;
+        cout << "Height: ";
+        cin >> h;
+
+
+
+        for(int i = 1; i <= h; i++)
+        {
+            for(int k = i; k >= 1; k--)
+            {
+                cout << setw(1) << k;
+            }
+
+        cout << endl;
+        }
+
         c.
         987654321
         87654321
@@ -688,6 +704,16 @@ int main()
         321
         21
         1
+
+        int h = 9;
+
+        for (int i = h; i >= 1; i--)
+        {
+            for (int j = i; j >= 1; j--)
+            {
+                cout << setw(1) << j;
+            } cout << endl;
+        }
         */
 
 
