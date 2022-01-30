@@ -1,7 +1,7 @@
 #include<iostream> //input and output
-#include<vector> 
+#include<vector>
 #include<iomanip> //this sets the width eg.setw(3)
-#include<string> //string manipulation 
+#include<string> //string manipulation
 #include<bits/stdc++.h>
 #include<cmath>
 #include<fstream>  //file manipulation
@@ -14,17 +14,7 @@ using namespace std;
 
 int main()
 {
-    int h = 9;
-
-    for (int i = h; i >= 1; i--)
-    {
-        for (int j = i; j >= 1; j--)
-        {
-            cout << setw(1) << j;
-        } cout << endl;
-    }
-
+  
     // system("pause >0");
     return 0;
 }
-    
