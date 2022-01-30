@@ -614,7 +614,7 @@ int main()
 
 #/*16. A program to generate Fibonacci series. The first two digits in the series are 0 and 1 and the rest is 
         computed by adding the preceding two digits. (i.e. 0 1 2 3 5 8 13 . . .) 
-          int n;
+        int n;
         cout << "Up to Number: ";
         cin >> n;
 

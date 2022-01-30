@@ -70,7 +70,7 @@ int main()
         t_g = mid_grade + ass_grade + final_grade;
 
         // Decision for switch cases to be check against
-        if(t_g >= 91 && t_g <= 180)
+        if(t_g >= 91 && t_g <= 100)
             check = 1;
         else if(t_g >= 84 && t_g <= 90)
             check = 2;
