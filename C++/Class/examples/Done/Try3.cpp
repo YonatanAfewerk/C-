@@ -16,18 +16,11 @@ using namespace std;
 
 int main()
 {
-	int a, b, c, d;
 	
-	a = 1;
-	b = 4;
-	c = 3;
-	d = 4;
-
-	cout << " a & b = " << (a & b) << endl;
 
 
 
-	// system("pause > 0");s
+	// system("pause > 0");
 	return 0;
 }
 

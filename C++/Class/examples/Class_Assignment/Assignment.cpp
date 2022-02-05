@@ -23,11 +23,11 @@ int main()
     char cheack_torepeat;
 
     //welcome and rule
-    cout << "=========================================================================\n ";
-    cout << "                            Grade Report                                 \n ";
-    cout << " Make Sure to Answer every Question properly. NB-> specially Your Marks   \n ";
-    cout << "               -> No over the limit and negative numbers                 \n ";
-    cout << "=========================================================================\n ";
+    cout << "=========================================================================\n";
+    cout << "                            Grade Report                                 \n";
+    cout << " Make Sure to Answer every Question properly. NB-> specially Your Marks   \n";
+    cout << "               -> No over the limit and negative numbers                 \n";
+    cout << "=========================================================================\n";
 
     cout << endl;
     // Get Info from user
@@ -157,8 +157,8 @@ int main()
 
 
     // Get the Info out to the user
-    cout << "=======================================================================\n ";
-    cout << "                       Final Grade Report                              \n ";
+    cout << "=======================================================================\n";
+    cout << "                       Final Grade Report                              \n";
 
     cout << endl;
     cout << "Full Name: " << full_name << endl;
@@ -169,13 +169,13 @@ int main()
     cout << "Final Mark(50): " << final_grade << endl;
     cout << "Final Mark(100): " << t_g << endl;
     cout << endl;
-    cout << "=======================================================================\n ";
+    cout << "=======================================================================\n";
     cout << "Final Grade:       -> " << Final_grade << endl;
     cout << "Comment            -> " << comment << endl;
-    cout << "=======================================================================\n ";
+    cout << "=======================================================================\n";
     
     cout << endl;
-    cout << "=======================================================================\n ";
+    cout << "=======================================================================\n";
     cout << "To Check for Your Other course Enter 'Y' For YES and 'N' For NO " << endl;
     cin >> cheack_torepeat;
     cout << "=======================================================================\n";
