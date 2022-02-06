@@ -1,14 +1,4 @@
 #include<iostream> //input and output
-#include<vector>
-#include<iomanip> //this sets the width eg.setw(3)
-#include<string> //string manipulation
-#include<bits/stdc++.h>
-#include<cmath>
-#include<fstream>  //file manipulation
-#include<string> // Needed to use strings
-#include<cstdlib> // Needed to use random numbers
-#include<ctime> //to use the random number generator rnad(time())
-#include<list> //lets you include string list store {"one","two","three"}
 
 using namespace std;
 
@@ -17,14 +7,17 @@ int main()
     //Declaration
     float mid_grade, final_grade, ass_grade, t_g;
     string course_name, full_name, id_num, Final_grade, comment;
-    char cheack_torepeat;
+    char check_torepeat;
 
 
     //welcome and rule
     cout << "=========================================================================\n";
-    cout << "                            Grade Report                                 \n";
-    cout << " Make Sure to Answer every Question properly. NB-> specially Your Marks   \n";
+    cout << "                              Grade Report                               \n";
+    cout << " Make Sure to Answer every Question properly. NB-> specially Your Marks  \n";
     cout << "               -> No over the limit and negative numbers                 \n";
+    cout << "=========================================================================\n";
+    cout << "This is a simple Grade Report assignment for computer programming course \n";
+    cout << "                   Yonatan Afewerk Teshome Id-> 917/13                   \n";
     cout << "=========================================================================\n";
 
     cout << endl;
@@ -147,10 +140,10 @@ int main()
     
 
     cout << "=======================================================================\n";
-    cout << "To Check for Your Other course Enter 'Y' For YES and 'N' For NO " << endl;
-    cin >> cheack_torepeat;
+    cout << "To Check for Your Other course Enter 'Y' For YES and 'Other key' For NO " << endl;
+    cin >> check_torepeat;
     cout << "=======================================================================\n";
-    } while(cheack_torepeat == 'Y');
+    } while(check_torepeat == 'Y');
     
   
     // system("pause >0");
