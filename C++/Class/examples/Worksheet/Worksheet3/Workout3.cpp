@@ -37,8 +37,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*2. Write a program that reads two integers (in any order) and then print either “multiple” or “not “according to
     weather 2nd number is multiple of the 1st one or not.
     int x, y;
@@ -73,8 +71,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*3. Write a program that reads two integers (in any order) and then print either “multiple” or “not” according to
     weather one of the integer is multiple of other.
    
@@ -107,8 +103,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*4. Write a program that takes two numbers from user and determines that first number is a factor of second
     number
         double x, y;
@@ -136,8 +130,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*5. Write a program that mimics a calculator. The program should take as input two integers and the operation
     to be performed. It should then output the numbers, the operator, and the result. (For division, if the
     denominator is zero, output an appropriate message.) Use 1 for Addition, 2 for Subtraction, 3 for Multiplication,
@@ -177,8 +169,6 @@ int main()
 
 
 //============================================================================================================//
-  
-
 #/*6. Write a program that calculate the real roots of a quadratic equation and displays the result.
         
         // ax^2+bx+c = 0 this a quadratic equation
@@ -215,8 +205,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*7. Write a program to display the first 100 odd numbers
             int i, sum = 0;
             
@@ -230,8 +218,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*8. Write for, do-while, and while statements to compute the following sums and products.
             a. 1+2+3+…+100
             b. 1*2*3*…*20
@@ -324,8 +310,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*9. A prime number is an integer greater than one and divisible only by itself and one. The first seven prime
     numbers are 2, 3, 5, 7, 11, 13, and 17. Write a program that displays all the prime numbers between 1 and 100. 
     
@@ -369,8 +353,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*10. Write a C++ program that counts the number of digits in an integer number. For example; 23,498 has five
     digits
     
@@ -392,8 +374,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/* 11. Write a C++ application that can compute the letter grade of a student after accepting the student’s mid and
     final mark. The program should only accept mid result [0-40] and final [0- 60]. If the data entered violates this
     rule, the program should display that the user should enter the mark in the specified range. The program is also
@@ -438,8 +418,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/* 12. Write a C++ program that accepts a positive number from the user and displays the factorial of that number.
     Use for loops to find the factorial of the number. 
 
@@ -457,8 +435,6 @@ int main()
 
    
 //============================================================================================================//
-
-
 #/* 13. write a program in C++ to read a number n and a single digit d. The program then determines whether the
     digit presents in the number or not. If it presents the program should determine how many times it appear and
     the position of the digit in the number 
@@ -485,8 +461,6 @@ int main()
 
 
 //============================================================================================================//
-  
-   
 #/* 14. Using the ASCII table numbers, write a program to print the following output, using a nested for loop. (Hint:
     the outer loop should loop from 1 to 5, and the inner loop’s start variable should be 65, the value of ASCII “A”). 
     
@@ -500,8 +474,6 @@ int main()
     
 
 //============================================================================================================//
-
-
 #/*15. Write a C++ program that will print the following shapes  
         A.
         *
@@ -610,8 +582,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*16. A program to generate Fibonacci series. The first two digits in the series are 0 and 1 and the rest is 
         computed by adding the preceding two digits. (i.e. 0 1 2 3 5 8 13 . . .) 
         int n;
@@ -640,8 +610,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*17. Write a program that accepts a number from the key board and reverses the digits of a given number. 
         write a program that generates the following series of numbers 
         a.
@@ -718,8 +686,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*18.. Use either a switch or an if-else statement and display whether a vowel or a consonant character is entered
     by the user. The program should work for both lower case and upper case letters. 
     
@@ -778,8 +744,6 @@ int main()
 
     */
 //============================================================================================================//
-
-
  #/*19. Write a C++ code to display only even numbers found between 0 and 20.
         for (int i = 0; i <= 20; i++)
         {
@@ -792,8 +756,6 @@ int main()
 
 
 //============================================================================================================//
-
-
 #/*20. A multiplication table
             long long num , mult_num = 1;
             cout << "======================================================== \n";
