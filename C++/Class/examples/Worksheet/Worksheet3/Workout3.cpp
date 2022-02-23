@@ -139,9 +139,9 @@ int main()
             char op;
             cout << "First Number: ";
             cin >> x ;
-            cout << "Opertion? ";
+            cout << "Operation? ";
             cin >> op ;
-            cout << "Seconed Number: ";
+            cout << "Second Number: ";
             cin >> y ;
             
             double result;
@@ -385,7 +385,7 @@ int main()
             cout << "=========================================================================== \n";
             do
             {
-                cout << "Enter Your mid Grade out off 40%: "; // this cause the do while loops start by excuting the code first then check the conditions
+                cout << "Enter Your mid Grade out off 40%: "; // this cause the do while loops start by executing the code first then check the conditions
                 cin >> mid;
             } while (mid < 0 || mid > 40);
             

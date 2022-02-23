@@ -110,7 +110,7 @@ int main()
     cin >> num3;
 
     // the calculations of min, ave , max::
-    //avereage
+    //average
     double ave = (num1 + num2 + num3)/ 3;
     //sum
     double sum = num1 + num2 + num3;
