@@ -14,9 +14,31 @@ using namespace std;
 
 int main()
 {
-    
-    
+    string name;
+    name = "Yonatan";
+
+
+
+    fstream File;
+
+
+    File.open("File.txt", ios::in); // mode out is Write
+
+  if(File.is_open())
+  {
+      string line;
+      while (getline(File, line))
+      {
+          cout << line << endl;
+      }
+      File.close();
+  }
+
   
+
+  cout << "File created successfully.";
+
     // system("pause >0");
     return 0;
 }
+

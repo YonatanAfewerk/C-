@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+#include <string>
 #include<iomanip>
 using namespace std;
 
@@ -91,12 +92,12 @@ char ch;
 int num;
 system("cls");
 cout<<"\n\n\n\tMENU ";
-cout<<"\n\n\t1.Create student record";
+cout<<"\n\n\t1. Create student record";
 cout<<"\n\n\t2. Search student record";
 cout<<"\n\n\t3. Display all students records ";
-cout<<"\n\n\t4.Delete student record";
-cout<<"\n\n\t5.Modify student record";
-cout<<"\n\n\t6.Exit";
+cout<<"\n\n\t4. Delete student record";
+cout<<"\n\n\t5. Modify student record";
+cout<<"\n\n\t6. Exit";
 cout<<"\n\n What is your Choice (1/2/3/4/5/6) ";
 cin>>ch;
 system("cls");
@@ -221,7 +222,7 @@ fl.read(reinterpret_cast<char *> (&stud), sizeof(student));
 if(stud.retrollno()==n)
 {
 stud.showdata();
-cout<<"\n\Enter new student details:"<<endl;
+cout<<"\n Enter new student details:"<<endl;
 stud.getdata();
     int pos=(-1)*static_cast<int>(sizeof(stud));
     fl.seekp(pos,ios::cur);
@@ -230,45 +231,10 @@ stud.getdata();
     found=true;
 }
 }
-File.close();
+f1.close();
 if(found==false)
 cout<<"\n\n Record Not Found ";
 cin.ignore();
 cin.get();
 }
 
-// modify record for specified roll number
-void change_student(int n)
-{
-bool found=false;
-student stud;
-fstream fl;
-fl.open("student.dat",ios::binary|ios::in|ios::out);
-if(!fl)
-{
-cout<<"File could not be opened. Press any Key to exit...";
-cin.ignore();
-cin.get();
-return;
-}
-     while(!fl.eof() && found==false)
-{
-fl.read(reinterpret_cast<char *> (&stud), sizeof(student));
-if(stud.retrollno()==n)
-{
-stud.showdata();
-cout<<"\n\Enter new student details:"<<endl;
-stud.getdata();
-    int pos=(-1)*static_cast<int>(sizeof(stud));
-    fl.seekp(pos,ios::cur);
-    fl.write(reinterpret_cast<char *> (&stud), sizeof(student));
-    cout<<"\n\n\t Record Updated";
-    found=true;
-}
-}
-File.close();
-if(found==false)
-cout<<"\n\n Record Not Found ";
-cin.ignore();
-cin.get();
-}

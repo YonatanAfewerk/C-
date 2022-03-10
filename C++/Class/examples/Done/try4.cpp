@@ -13,6 +13,18 @@ using namespace std;
 
 int main()
 {
+    const int max = 100;
+
+    char str[max];
+
+    cout << "Enter FullName: ";
+    cin.get(str, max);
+
+    cout << "Full Name: " << str << endl;
+
+    
+
+
 
     // system("pause > 0");
     return 0;  

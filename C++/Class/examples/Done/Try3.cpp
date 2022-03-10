@@ -16,12 +16,34 @@ using namespace std;
 
 int main()
 {
-	
+	fstream File;
+
+    File.open("student.txt", ios::app);
+
+    if(File.is_open())
+    {
+        File << "Done" << endl;
+        File.close();
+    }
+
+    File.open("student.txt", ios::in);
+
+    if(File.is_open())
+    {
+        string line;
+        while (getline(File, line))
+        {
+            cout << line << endl;
+        }
+        File.close();
+    }
+
+
+    cout << "File created successfully.";
+
 
 
 
 	// system("pause > 0");
 	return 0;
 }
-
-  

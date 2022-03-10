@@ -1,46 +1,63 @@
 #include<iostream>
-#include<vector>
-#include<iomanip>
 #include <string>
-#include <bits/stdc++.h>
 #include <cmath>
 #include <fstream>
 
 using namespace std;
 
-   //Global variable's
-   string name, email, course_name, Final_grade, comment;
-   double grade, id, t_g;
-   int  a;
+
+
+    //Global variable's
+   string Final_grade, comment, name, course_name;
+   char id[20], email[100];
+   string id2[20], name2[5], last_name[5];
+   double grade, t_g;
+   int  a, i, j;
    fstream login_file;
    int mid_grade, ass_grade, final_grade;
-   char check_torepeat, check_torepeat2, check_tosave;
+   char check_torepeat, check_torepeat2, check_tosave, checkstu;
+   char A, M, I, F, P;
 
-   // Declaration of function 
-   void stu_report_card(string name, double grade, double id, string email, string course_name, int mid_grade, int final_grade, int ass_grade, double t_g, string Final_grade, string comment);
+
+
+   // Declaration of function
+   void stu_report_card(string name, double grade, char id[20], string email, string course_name, int mid_grade, int final_grade, int ass_grade, double t_g, string Final_grade, string comment);
    void get_info();
    void save_stu();
    void read_stu();
    void welcome();
    void menu();
    void calculation();
+   void termiiigetino();
+   void termiiiread();
+
+
+
+   // term-iii grades student construct
+    struct termiii
+    {
+        char anthropology;
+        char moral;
+        char inclusive;
+        char fund;
+        char prog;
+    }studentone[5];
+
 
 
 // Main Function
 int main()
 {
-   // Welcome 
+   // Welcome
    welcome();
-   
-   cout << endl;
+
    cout << endl;
 
    // Get information
    get_info();
 
    cout << endl;
-   cout << endl;
-   
+
       do
       {
          // Menu
@@ -50,74 +67,87 @@ int main()
          {
             case 1:
                   calculation();
-                  break; 
+                  break;
             case 2:
                   save_stu();
                   break;
-                  
+
             case 3:
                   read_stu();
                   break;
             case 4:
                   stu_report_card(name, grade, id, email,course_name, mid_grade,final_grade,ass_grade,t_g,Final_grade, comment);
                   break;
+            case 5:
+                    termiiigetino();
+                    break;
+            case 6:
+                    termiiiread();
+                    break;
             default:
                   cout << "Unknown card";
          }
 
-         cout << "\n\n";
+         cout << "\n";
          cout << "=======================================================================\n\n";
          cout << "To get back to the Menu Enter 'Y' For YES and 'Other key' For NO " << endl;
          cin >> check_torepeat2;
-         cout << "=======================================================================\n";
-     
+
       } while(check_torepeat2 == 'Y');
-   
+
       cout << "Thank You For using our simple Program. \n";
 
-   return 0; 
+   return 0;
 }
 
-// Defining Funcation
+
+
+
+// Defining Function
 
 // Welcome function (Function 1)
 void welcome()
 {
-   cout << "               HARAMAYA UNIVERSTY"<< endl;
-   cout << "            STUDENT GRADE MANAGEMENT"<< endl;
-   cout << "======================================================";
+   cout << "                         HARAMAYA UNIVERSTY"<< endl;
+   cout << "                      STUDENT GRADE MANAGEMENT"<< endl;
+   cout << "======================================================================= \n";
 }
 
-// Menu (Funcation 2)
+
+// Menu (Function 2)
 void menu()
 {
-      cout << "                     Menu: \n";
-      cout << "======================================================" << endl;
-      cout << "                  |1| Calculation: \n";
+      cout << "                  |Menu:| \n";
+      cout << "----------------------------------------------------------------------- \n";
+      cout << "                  |1| Single course Calculation: \n";
       cout << "                  |2| To Save: \n";
       cout << "                  |3| To Read Full Document: \n";
       cout << "                  |4| Single Report card: \n";
-      cout << "                     Enter : ";
+      cout << "                  |5| Term-iii grade: \n";
+      cout << "                  |6| Read Term-iii grade: \n";
+      cout << "----------------------------------------------------------------------- \n";
+
+      cout << "                  |Enter| : ";
       cin >> a;
-      
-      
-   
+      cout << "\n\n";
 }
 
-// Get information from user (Funcation 2)
+
+// Get information from user (Function 3)
 void get_info()
 {
-   cout << "Name: ";
-   getline(cin , name);
-   cout << "Email: ";
-   getline(cin , email);
-   cout << "CGPA: ";
-   cin >> grade;
-   cout << "Id number: ";
-   cin >> id;
+    cout << "Name: ";
+    getline(cin, name);
+    cout << "Email: ";
+    cin >> email;
+    cout << "CGPA: ";
+    cin >> grade;
+    cout << "Id number: ";
+    cin >> id;
 }
 
-// save function (Function 3)
+
+// save function (Function 4)
 void save_stu()
 {
 document_file.open("student.txt", ios::out | ios::app);
@@ -131,7 +161,7 @@ document_file.open("student.txt", ios::out | ios::app);
       {
       document_file << "\n\n";
       document_file << "                           Report card " << endl;
-      document_file << "======================================================================="<< endl;
+      document_file << "======================================================================= \n";
       document_file << "Full Name: " << name << endl;
       document_file << "Grade|CGPA|: " << grade << endl;
       document_file << "Id Number: " << id << endl;
@@ -142,10 +172,10 @@ document_file.open("student.txt", ios::out | ios::app);
       document_file << "Final Mark(50): " << final_grade << endl;
       document_file << "Final Mark(100): " << t_g << endl;
       document_file << endl;
-      document_file << "=======================================================================\n";
+      document_file << "======================================================================= \n";
       document_file << "Final Grade:       -> " << Final_grade << endl;
       document_file << "Comment            -> " << comment << endl;
-      document_file << "=======================================================================\n";
+      document_file << "======================================================================= \n";
       document_file.close();
       }
    }else
@@ -154,7 +184,9 @@ document_file.open("student.txt", ios::out | ios::app);
    }
 }
 
-// read full Document function (Function 4)
+
+
+// read full Document function (Function 5)
 void read_stu()
 {
 document_file.open("student.txt", ios::in);
@@ -168,10 +200,34 @@ document_file.open("student.txt", ios::in);
         }
      document_file.close();
     }
+
 }
 
-// Single Report card function (Funcation 5)
-void stu_report_card(string name, double grade, double id, string email, string course_name, int mid_grade, int final_grade, int ass_grade, double t_g, string Final_grade, string comment)
+
+
+// read from the term-iii three document (Function 6)
+void termiiiread()
+{
+    cout << "Read from the Structure \n";
+
+ document_file.open("studentTermiii.txt", ios::in);
+
+    if(login_file.is_open())
+    {
+        string line;
+        while (getline(login_file, line))
+        {
+            cout << line << endl;
+        }
+     document_file.close();
+    }
+
+}
+
+
+
+// Single Report card function (Function 7)
+void stu_report_card(string name, double grade, char id[20], string email, string course_name, int mid_grade, int final_grade, int ass_grade, double t_g, string Final_grade, string comment)
 {
    cout << "                           Report card" << endl;
    cout << "=======================================================================\n";
@@ -185,14 +241,16 @@ void stu_report_card(string name, double grade, double id, string email, string 
    cout << "Final Mark(50): " << final_grade << endl;
    cout << "Final Mark(100): " << t_g << endl;
    cout << endl;
-   cout << "=======================================================================\n";
+   cout << "------------------------------------------------------------------------ \n";
    cout << "Final Grade:       -> " << Final_grade << endl;
    cout << "Comment            -> " << comment << endl;
-   cout << "=======================================================================\n";
-   
+   cout << "------------------------------------------------------------------------ \n";
+
 }
 
-// calculate you grade based on the term 
+
+
+// calculate you grade based on the term (Function 8)
 void calculation()
 {
    // To Enable the Program to compute other course grades use do-while loop
@@ -228,10 +286,10 @@ void calculation()
     // Get the computations for the Total Grade
         t_g = mid_grade + ass_grade + final_grade;
 
-    //For A 
+    //For A
     switch (t_g >= 90 && t_g < 100)
     {
-        
+
             case 1:
                 Final_grade = " A";
                 comment = "Excellent ";
@@ -302,11 +360,11 @@ void calculation()
          document_file << "Final Mark(50): " << final_grade << endl;
          document_file << "Final Mark(100): " << t_g << endl;
          document_file << endl;
-         document_file << "=======================================================================\n";
+         document_file << "------------------------------------------------------------------------\n";
          document_file << "Final Grade:       -> " << Final_grade << endl;
          document_file << "Comment            -> " << comment << endl;
-         document_file << "=======================================================================\n";
-      
+         document_file << "------------------------------------------------------------------------\n";
+
          }
     }else
     {
@@ -315,7 +373,86 @@ void calculation()
 
     cout << "To Check for Your Other course Enter 'Y' For YES and 'Other key' For NO " << endl;
     cin >> check_torepeat;
-    cout << "=======================================================================\n";
     } while(check_torepeat == 'Y');
-    
+
 }
+
+
+
+
+// Term iii grade report (Function 9)
+void termiiigetino()
+{
+
+    for(i = 1; i < 5; i++)
+    {
+        cout << "First Name: ";
+        cin >> name2[i];
+        cout << "Second Name: ";
+        cin >> last_name[i];
+        cout << "Enter id: ";
+        cin >> id2[i];
+        cout << "|Use Capital Letters| " << endl;
+        cout << "---------------------------------------------------------------------- \n";
+
+        cout << "Social Anthropology:  ";
+        cin >> A;
+        cout << "Moral and Civic Education:  ";
+        cin >> M;
+        cout << "Inclusive education:  ";
+        cin >> I;
+        cout << "Fundamental of Software Engineering:  ";
+        cin >> F;
+        cout << "Computer Programming:  ";
+         cin >> P;
+        studentone[i] = {A, M, I, F, P};
+
+        cout << "Do you want to enter another student term-iii grade.(Y-yes)(N-no) \n";
+        cin >> checkstu;
+
+        if(checkstu == 'N' || checkstu == 'n')
+        {
+             goto done;
+        }
+
+    }
+
+    done:
+    cout << "\n\n";
+
+
+ document_file.open("studentTermiii.txt", ios::out | ios::app);
+    char check;
+    cout << "Do you want to save?(Y-yes)(N-no) : ";
+    cin >> check;
+
+    if(check == 'Y' || check == 'y')
+    {
+        if(login_file.is_open())
+        {
+         document_file << "\n\n";
+         document_file << "                        Term-iii Report card " << endl;
+         document_file << "---------------------------------------------------------------------- \n";
+
+                for(j = 1; j <= i; j++)
+                {
+                 document_file << "Full Name : " << name2[j] << " " << last_name[j] << endl;
+                 document_file << "id: " << id2[j] << endl;
+
+                 document_file << "Social Anthropology: " << studentone[j].anthropology << endl;
+                 document_file << "Moral and Civic Education: " << studentone[j].moral << endl;
+                 document_file << "Inclusive education:: " << studentone[j].inclusive << endl;
+                 document_file << "Fundamental of Software Engineering: " << studentone[j].fund << endl;
+                 document_file << "Computer Programming: " << studentone[j].prog << endl;
+                 document_file << endl;
+                 document_file << "---------------------------------------------------------------------- \n";
+                }
+
+         document_file.close();
+        }
+    }else
+    {
+        cout << "Not saved! " << endl;
+    }
+}
+
