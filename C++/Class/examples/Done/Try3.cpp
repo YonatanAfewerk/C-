@@ -13,37 +13,24 @@
 
 using namespace std;
 
+int sum(int n)
+{
+   if(n != 1)
+        return n + sum(n-1);
+   return 1;
+   
+}
+
 
 int main()
 {
-	fstream File;
+    int x = 100;
 
-    File.open("student.txt", ios::app);
+    
 
-    if(File.is_open())
-    {
-        File << "Done" << endl;
-        File.close();
-    }
-
-    File.open("student.txt", ios::in);
-
-    if(File.is_open())
-    {
-        string line;
-        while (getline(File, line))
-        {
-            cout << line << endl;
-        }
-        File.close();
-    }
-
-
-    cout << "File created successfully.";
-
-
-
+    cout << "sum: " << sum(x);
 
 	// system("pause > 0");
 	return 0;
 }
+    

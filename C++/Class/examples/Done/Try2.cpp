@@ -13,29 +13,23 @@ fstream classes */
 
 using namespace std;
 
-    //Global variables 
-    string n;
-    string d;
-    int i;
-    int a;
-    float g;
-
+// structure form defining 
 struct student
 {
     string name;
     string department;
     int id;
     int age;
-    float grade;
-}stu1={"Yonatan", "Software", 917, 22, 4.00};
+};
 
 int main()
-{  
-    cout << stu1.name << endl;
-    cout << stu1.department << endl;
-    cout << stu1.id << endl;
-    cout << stu1.age << endl;
-    cout << stu1.grade << endl;
+{ 
+    student stu1 = {"Yonatan Afewerk", "Software engineering", 917, 22};
+
+    cout << "Name: " << stu1.name << endl;
+    cout << "Deparment: " << stu1.department << endl;
+    cout << "Id: " << stu1.id << endl;
+    cout << "Age: " << stu1.age << endl;
 
     //system("pause > 0");
     return 0;  

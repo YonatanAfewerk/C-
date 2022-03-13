@@ -16,23 +16,33 @@ int main()
 {
     string name;
     name = "Yonatan";
-
-
-
     fstream File;
+
+
+
+    File.open("File.txt", ios::out | ios::app);
+
+    if(File.is_open())
+    {
+        File << name << endl;
+        File << name << endl;
+        File << name << endl;
+        File << name << endl;
+        File.close();
+    }
 
 
     File.open("File.txt", ios::in); // mode out is Write
 
-  if(File.is_open())
-  {
-      string line;
-      while (getline(File, line))
-      {
-          cout << line << endl;
-      }
-      File.close();
-  }
+    if(File.is_open())
+    {
+        string line;
+        while (getline(File, line))
+        {
+            cout << line << endl;
+        }
+        File.close();
+    }
 
   
 

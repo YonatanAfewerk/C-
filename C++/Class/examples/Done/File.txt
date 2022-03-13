@@ -1,5 +1,0 @@
-Text written in the file using the out mode 
-This is the second line. 
-YonatanText written in the file using the out mode 
-This is the second line.
-This line is added manually to the File Txt
