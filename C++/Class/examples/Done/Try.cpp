@@ -25,7 +25,7 @@ int main()
     if(File.is_open())
     {
         File << name << endl;
-        File << name << endl;
+        File << "name" << endl;
         File << name << endl;
         File << name << endl;
         File.close();
