@@ -1202,6 +1202,7 @@
         int dice; // stores the random number
         srand(time(0));
         dice = rand()%10 + 1;
+        
 
     // how to swap a values of two variables
             //using a 3rd variable
