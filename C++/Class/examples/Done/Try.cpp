@@ -14,39 +14,26 @@ using namespace std;
 
 int main()
 {
-    string name;
-    name = "Yonatan";
-    fstream File;
+    int x, y;
 
+    cout << "weather 2nd number is multiple of the 1st one or not: \n";
+    cout << "========================================================= \n";
 
+    cout << "Second number: ";
+    cin >> x; // eg. x = 5
+    cout << "First number: ";
+    cin >> y; // eg. y = 15
 
-    File.open("File.txt", ios::out | ios::app);
+    int k;
+    k = x % y;
 
-    if(File.is_open())
+    if(k == 0)
     {
-        File << name << endl;
-        File << "name" << endl;
-        File << name << endl;
-        File << name << endl;
-        File.close();
-    }
-
-
-    File.open("File.txt", ios::in); // mode out is Write
-
-    if(File.is_open())
+        cout << x << " Is a Multiple of "<< y << endl;
+    }else
     {
-        string line;
-        while (getline(File, line))
-        {
-            cout << line << endl;
-        }
-        File.close();
+        cout << "Not a Multiple" << endl;
     }
-
-  
-
-  cout << "File created successfully.";
 
     // system("pause >0");
     return 0;
